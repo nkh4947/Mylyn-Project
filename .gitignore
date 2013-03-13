@@ -1,0 +1,5 @@
+#binary files
+bin
+*.class
+#log files
+.log

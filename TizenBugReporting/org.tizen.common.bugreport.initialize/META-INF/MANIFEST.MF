@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Initialize
+Bundle-SymbolicName: org.tizen.common.bugreport.initialize;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.tizen.common.bugreport.initialize.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.atlassian.connector.eclipse.internal.jira.core,
+ org.eclipse.mylyn.commons.net,
+ org.eclipse.mylyn.internal.tasks.core,
+ org.eclipse.mylyn.internal.tasks.ui,
+ org.eclipse.mylyn.tasks.core

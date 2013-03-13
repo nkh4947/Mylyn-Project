@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.mylyn.tasks.bugs.support">
+      <provider
+            categoryId="org.eclipse.mylyn.tasks.bugs.commercial"
+            description="Bug report for tizen SDK"
+            id="org.tizen.common.bugreport.provider1"
+            name="Tizen SDK">
+      </provider>
+      <product
+            description="Tizen IDE bug report"
+            id="org.tizen.common.bugreport.product2"
+            name="Tizen IDE"
+            pluginId="org.tizen.common.bugreport"
+            providerId="org.tizen.common.bugreport.provider1"
+            url="http://tizen.org">
+      </product>
+      <mapping
+            namespace="org.tizen"
+            productId="org.tizen.common.bugreport.product2">
+         <repository
+               kind="jira"
+               url="http://slp-info.sec.samsung.net/bugs">
+         </repository>
+         <property
+               name="product"
+               value="Nabi">
+         </property>
+      </mapping>
+      <handler
+            class="org.eclipse.mylyn.internal.tasks.bugs.DefaultSupportHandler"
+            id="org.tizen.common.bugreport.handler1">
+      </handler>
+   </extension>
+   
+	<extension point="org.eclipse.mylyn.tasks.core.templates">
+ 		<repository
+         addAutomatically="true"
+         anonymous="true"
+         characterEncoding="UTF-8"
+         label="TizenAAA"
+         repositoryKind="jira"
+         urlRepository="http://slp-info.sec.samsung.net/bugs"
+         version="3.6">
+        </repository>
+	</extension>
+	
+	
+	
+	<!--
+   <extension
+         name="Tizen Repository"
+         point="org.eclipse.mylyn.tasks.ui.repositories">
+      <connectorCore
+            class="org.tizen.common.bugreport.connector.TizenRepositoryConnector"
+            id="tizen"
+            name="Tizen Connector"/>
+        <connectorUi 
+            class="com.atlassian.connector.eclipse.internal.jira.ui.JiraConnectorUi"
+            name="Jira connector"/>
+        <taskListMigrator
+            class="com.atlassian.connector.eclipse.internal.jira.ui.JiraTaskListMigrator">
+        </taskListMigrator>
+       <repositoryMigrator class="com.atlassian.connector.eclipse.internal.jira.ui.JiraRepositoryMigrator"/>
+   </extension>
+   -->
+   
+   
+   
+   
+   
+   
+   <extension
+         point="org.eclipse.mylyn.tasks.ui.editors">
+      <pageFactory
+            class="org.tizen.common.bugreport.editor.TizenTaskEditorPageFactory"
+            id="org.eclipse.mylyn.jira.ui.tizenpageFactory">
+      </pageFactory>
+   </extension>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+</plugin>

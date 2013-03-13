@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.atlassian.connector.eclipse.perforce"
+      label="%featureName"
+      version="3.0.7.qualifier"
+      provider-name="%providerName"
+      plugin="com.atlassian.connector.eclipse.branding.ui">
+
+   <description url="http://atlassian.com">
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="license.html">
+      %license
+   </license>
+
+   <url>
+      <update label="%updateSiteName" url="http://update.atlassian.com/atlassian-eclipse-plugin"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="com.atlassian.connector.eclipse.ui"/>
+      <import plugin="org.eclipse.mylyn.commons.core" version="3.2.0" match="compatible"/>
+      <import plugin="org.eclipse.core.filesystem"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.team.svn"/>
+      <import plugin="org.eclipse.team.svn.core"/>
+      <import plugin="org.eclipse.team.svn.ui"/>
+      <import feature="org.eclipse.team.svn" version="0.7.8" match="compatible"/>
+   </requires>
+
+   <plugin
+         id="com.atlassian.connector.eclipse.perforce.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.atlassian.connector.eclipse.perforce.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.perforce.p4java"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

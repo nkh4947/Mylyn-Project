@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %Bundle-Name
+Bundle-SymbolicName: com.atlassian.connector.eclipse.monitor.core;singleton:=true
+Bundle-Version: 3.0.7.qualifier
+Bundle-Activator: com.atlassian.connector.eclipse.monitor.core.MonitorCorePlugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.update.core,
+ org.eclipse.core.filesystem,
+ com.atlassian.connector.eclipse.branding.ui,
+ org.eclipse.mylyn.commons.core;bundle-version="[3.0.0,4.0.0)",
+ org.eclipse.mylyn.commons.net;bundle-version="[3.0.0,4.0.0)",
+ org.eclipse.mylyn.commons.ui;bundle-version="[3.0.0,4.0.0)",
+ com.thoughtworks.xstream,
+ org.apache.commons.io
+Bundle-ActivationPolicy: lazy
+Bundle-Vendor: %Bundle-Vendor
+Export-Package: 
+ com.atlassian.connector.eclipse.internal.monitor.core;x-internal:=true,
+ com.atlassian.connector.eclipse.internal.monitor.core.operations;x-internal:=true,
+ com.atlassian.connector.eclipse.monitor.core
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
